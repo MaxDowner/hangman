@@ -1,14 +1,14 @@
 
 # would prefer a more functiony name
-def guess_is_wrong(found_position: str, stored_word: str) -> None:
-    # tell user their guess is wrong
-    print(f"Your guess is correct! Your guessed letter is at {found_position}!")
-    #need to increment incorrect guess storage
-    incorrect_guesses_storage += 1
-    if incorrect_guesses_storage == len(stored_word):
+# could split into 2 for better naming
+    # decrement_guesses()
+    # check/exit_if_lost()
+# or could just rename to decrement_allowed_guesses_and_check_if_lost
+def guess_is_wrong(target_word: str, allowed_guesses: int) -> None:
+    '''increments correct guesses and check if won'''
+    print(f"Your guess is incorrect! You have {allowed_guesses} guesses left")
+    allowed_guesses -= 1
+    if allowed_guesses == 0:
         print("You've lost!")
-        # how to end game?
         quit()
-    # else:
-        # run take user input for guess
     return

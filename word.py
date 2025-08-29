@@ -9,6 +9,3 @@ def guess(): # takes a guess from user and stores it in already_guessed list
     guessed_letter = input('What is your guess?')
     already_guessed.append(guessed_letter)
     return already_guessed
-
-word_input()
-guess()
